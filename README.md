@@ -1,14 +1,14 @@
-# Travel Diary App (indiapp) ✈️
+# Travel Diary App 
 
 **A simple travel diary Flutter app to capture and revisit your travel memories.**
 
 ---
 
-## 🔎 Project summary
+## Project summary
 
 This project (aka `indiapp`) is a Flutter mobile app that lets users record travel journals with title, notes, date, location (picked on a map), images, and a rating. It uses Firebase for authentication and Firestore to store journal entries.
 
-## ✅ Key features
+## Key features
 
 - Email/password authentication (Firebase Auth)
 - Optional biometric login via `local_auth`
@@ -17,7 +17,7 @@ This project (aka `indiapp`) is a Flutter mobile app that lets users record trav
 - Add photos via camera/gallery (stores local image path) and simple image controls
 - Search and list your journal entries
 
-## 🧰 Tech stack
+## Tech stack
 
 | Component | Technology |
 |---|---|
@@ -29,19 +29,19 @@ This project (aka `indiapp`) is a Flutter mobile app that lets users record trav
 | Media | image_picker, image_cropper |
 | HTTP | http |
 
-## 📁 Project structure (important files)
+## Project structure (important files)
 
 - `lib/main.dart` — app entry / welcome screen
 - `lib/journal.dart` — authentication screen and biometric flow
 - `lib/menu.dart` — journal list (home) and search
-- `lib/entries.dart` — Add new journal / form & saving to Firestore
+- `lib/entries.dart` — Add new journal/form & saving to Firestore
 - `lib/location_picker.dart` — map UI and Nominatim search/reverse geocoding
 - `lib/JournalDetailsPage.dart` — journal detail view, edit & delete
 - `pubspec.yaml` — dependencies
 
 ---
 
-## ⚙️ Development setup
+## Development setup
 
 Prerequisites:
 - Flutter SDK (see https://flutter.dev/docs/get-started/install)
@@ -78,41 +78,17 @@ flutter run -d <device-id>
 
 ---
 
-## 🔐 Notes on security & data
+## Notes on security & data
 
 - The app currently stores selected image file paths locally (`imagePath` in Firestore). For multi-device access, consider uploading images to Firebase Storage and storing download URLs instead.
 - Ensure Firestore Security Rules are configured to restrict access to authenticated users and per-user data (not shipped in this repo).
 
-## 🧪 Tests & CI
+## Tests & CI
 
 - There are no unit/widget tests yet. Recommended next steps:
   - Add `flutter_test` unit and widget tests for `AddJournalPage` and `JournalHomePage`.
   - Add GitHub Actions workflow to run `flutter analyze` and `flutter test` on PRs.
 
-## 🤝 Contributing
-
-Contributions are welcome!
-- Fork the repo, create a branch, add tests, and open a pull request.
-- Please follow consistent formatting and prefer small, focused PRs.
-
-## 📄 License
-
-Add a license of your choice (e.g., MIT) — this repository currently has no explicit license file.
-
 ---
 
-## 📌 Notes about the GitHub import
-
-I created a new public repository **MalimGunung/travel-diary-app** and pushed a clean initial import of the project files (main branch). Your original remote `origin` was not modified.
-
-Repository: https://github.com/MalimGunung/travel-diary-app
-
----
-
-If you'd like, I can also:
-- Add CI (GitHub Actions) with analysis & tests ✅
-- Upload images to Firebase Storage and migrate the code to use URLs ✅
-- Add example environment and secure instructions for Firebase setup ✅
-
-Let me know which follow-up you'd prefer and I’ll prepare a short plan. ✨
 
