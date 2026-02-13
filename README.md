@@ -6,7 +6,7 @@
 
 ## Project summary
 
-This project (aka `indiapp`) is a Flutter mobile app that lets users record travel journals with title, notes, date, location (picked on a map), images, and a rating. It uses Firebase for authentication and Firestore to store journal entries.
+This project is a Flutter mobile app that lets users record travel journals with title, notes, date, location (picked on a map), images, and a rating. It uses Firebase for authentication and Firestore to store journal entries.
 
 ## Key features
 
